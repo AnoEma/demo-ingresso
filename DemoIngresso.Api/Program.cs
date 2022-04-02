@@ -1,3 +1,5 @@
+using DemoIngresso.Api.StartupConfig;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
@@ -12,6 +14,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.AddDemoIngressoEndpoint();
 
 var summaries = new[]
 {
