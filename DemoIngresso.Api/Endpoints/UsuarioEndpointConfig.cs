@@ -2,7 +2,7 @@
 {
     public static class UsuarioEndpointConfig
     {
-        public static void AddEndpoint()
+        public static void AddEndpoint(WebApplication app)
         {
 
         }

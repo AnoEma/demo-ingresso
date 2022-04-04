@@ -1,6 +1,12 @@
-﻿namespace DemoIngresso.Api.StartupConfig
+﻿using DemoIngresso.Api.Endpoints;
+
+namespace DemoIngresso.Api.StartupConfig
 {
-    public class EndpointConfig
+    public static class EndpointConfig
     {
+        public static void AddDemoIngressoEndpoint(this WebApplication app)
+        {
+            UsuarioEndpointConfig.AddEndpoint(app);
+        }
     }
 }
