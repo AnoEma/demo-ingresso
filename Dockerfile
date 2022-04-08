@@ -6,9 +6,9 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["DemoIngresso.Api/DemoIngresso.Api.csproj", "DemoIngresso.Api/"]
-COPY ["DemoIngresso.Api/DemoIngresso.Domain.csproj", "DemoIngresso.Domain/"]
-COPY ["DemoIngresso.Api/DemoIngresso.Application.csproj", "DemoIngresso.Application/"]
-COPY ["DemoIngresso.Api/DemoIngresso.Core.csproj", "DemoIngresso.Core/"]
+COPY ["DemoIngresso.Domain/DemoIngresso.Domain.csproj", "DemoIngresso.Domain/"]
+COPY ["DemoIngresso.Application/DemoIngresso.Application.csproj", "DemoIngresso.Application/"]
+COPY ["DemoIngresso.Core/DemoIngresso.Core.csproj", "DemoIngresso.Core/"]
 RUN dotnet restore "DemoIngresso.Api/DemoIngresso.Api.csproj"
 COPY . .
 WORKDIR "/src/DemoIngresso.Api"
